@@ -50,11 +50,11 @@
                   </h4>
                 </div>
                 <ul class="list-unstyled side bg-light">
-                  @foreach($vid as $row)
+                  @foreach($muc as $row)
                   <li class="media py-1">               
                     <img class="mr-3" src="{{$row->photo}}" alt="image" class="rounded" style="height: 90px; width:100px;border-radius: 5px;">
                     <div class="media-body pt-2">
-                      <a href="{{route('blogdetail', $row->id)}}"><p class="mt-0 mb-3 b" style="background-color: #f8f9fa;">{{$row->title}}</p></a>
+                      <a href="{{route('musicdetail', $row->id)}}"><p class="mt-0 mb-3 b" style="background-color: #f8f9fa;">{{$row->title}}</p></a>
                       <p>
                         <i class="fas fa-clock"></i> {{$row->updated_at->toFormattedDateString()}}
                       </p>
