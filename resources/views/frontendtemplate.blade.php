@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="icon" href="{{asset('frontend_asset/image/favicon.ico')}}" type="image/x-icon">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{{asset('frontend_asset/css/style.css')}}">
     <link href="{{asset('backend_asset/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -20,13 +20,13 @@
   </head>
   <body>
   <div class="container-fluid" style="border-top:2px solid  #3e3">
-      <div class="container py-2">    
+      <div class="container">    
       <div class="row logo">
         <div class="col-6">
-          {{-- <img src="{{asset('frontend_asset/image/log.png')}}"> <span style="font-size: 25px;font-weight: 700;padding-top: 20px;">True God</span>  --}}
-          <h4 class="pt-1">True God</h4>
+          <img src="{{asset('frontend_asset/image/logo.png')}}">
+          {{-- <h4 class="pt-1">True God</h4> --}}
         </div>
-        <div class="col-6">
+        <div class="col-6 pt-4">
           <form
           class="form-inline  navbar-search float-right" method="GET" action="{{route('searchpage')}}">
           <div class="input-group">
@@ -111,7 +111,7 @@
 
 if ($(window).width() > 992) {
   $(window).scroll(function(){  
-     if ($(this).scrollTop() > 50) {
+     if ($(this).scrollTop() > 100) {
         $('#navbar_top').addClass("fixed-top");
         // add padding top to show content behind navbar
         $('body').css('padding-top', $('.navbar').outerHeight() + 'px');

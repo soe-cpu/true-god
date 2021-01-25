@@ -63,14 +63,14 @@ class MusicController extends Controller
           // If include file, upload
 
         // store
-        $song = new Music;
-        $song->title = $request->title;      
-        $song->album = $request->album;
-        $song->artist = $request->artist;
-        $song->desc = $request->desc;
-        $song->song = $path;
-        $song->photo= $photopath;
-        $song->save();
+        $music = new Music;
+        $music->title = $request->title;      
+        $music->album = $request->album;
+        $music->artist = $request->artist;
+        $music->desc = $request->desc;
+        $music->song = $path;
+        $music->photo= $photopath;
+        $music->save();
 
         // redirect
         return redirect()->route('musics.index');
@@ -105,7 +105,7 @@ class MusicController extends Controller
      * @param  \App\Music  $music
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Music $song)
+    public function update(Request $request, Music $music)
     {
         $request->validate([
             "title" => "required",
@@ -125,7 +125,7 @@ class MusicController extends Controller
             $filePath = $request->file('photo')->storeAs('music', $fileName, 'public');
             $photopath = '/storage/'.$filePath;
         }else{
-            $photopath = $request->oldsong;
+            $photopath = $request->oldphoto;
         }
         if($request->file()) {
             // 624872374523_a.jpg
@@ -135,19 +135,19 @@ class MusicController extends Controller
             $path = '/storage/'.$filePath;
         }
         else{
-            $path = $request->oldphoto;
+            $path = $request->oldsong;
           // If include file, upload
         }
 
         // store
         
-        $song->title = $request->title;      
-        $song->album = $request->album;
-        $song->artist = $request->artist;
-        $song->desc = $request->desc;
-        $song->song = $path;
-        $song->photo= $photopath;
-        $song->save();
+        $music->title = $request->title;      
+        $music->album = $request->album;
+        $music->artist = $request->artist;
+        $music->desc = $request->desc;
+        $music->song = $path;
+        $music->photo= $photopath;
+        $music->save();
 
         // redirect
         return redirect()->route('musics.index');

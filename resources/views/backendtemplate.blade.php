@@ -121,7 +121,7 @@
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"> 
                    {{--  <img src="{{asset('frontend_asset/image/log.png')}}" height="50px;"> <span style="font-size: 25px;font-weight: 700;padding-top: 10px;">True God</span> --}}
-                   <h4>True God</h4>
+                   <img src="{{asset('frontend_asset/image/logo.png')}}" width="70">
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
