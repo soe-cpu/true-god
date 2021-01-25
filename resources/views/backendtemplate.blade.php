@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>Admin</title>
-
+    <link rel="icon" href="{{asset('frontend_asset/image/favicon.ico')}}" type="image/x-icon">
     <!-- Custom fonts for this template-->
     <link href="{{asset('backend_asset/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <link

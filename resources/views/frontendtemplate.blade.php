@@ -83,7 +83,7 @@
         </div>
       </div>
        <hr>
-       <p class="text-center text-white">By2021</p>
+       <p class="text-center text-white">Power By IT Geniuses 2021</p>
         <a href="#" class="back-to-top">
         <i class="far fa-arrow-alt-circle-up"></i>
         </a>
